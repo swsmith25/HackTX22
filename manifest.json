@@ -1,32 +1,27 @@
 {
     "name": "Slay",
     "version": "1.0",
-    "description": "Populate webpages with an ad lib format.",
+    "description": "Parse website to make a playlist that is so slay.",
     "manifest_version": 2,
     "permissions": [
         "webNavigation",
         "declarativeContent",
         "storage",
+        "*://open.spotify.com/*",
         "tabs"
     ],
     "background": {
         "scripts": ["app/background.js"]
     },
-    "options_page": "app/settings.html",
     "browser_action": {
-        "default_popup": "app/popup.html",
+        "default_popup": "app/popupCard.html",
         "default_icon": {
-            "16": "img/icon16.png",
-            "32": "img/icon32.png",
-            "48": "img/icon48.png",
-            "128": "img/icon128.png"
+            "16": "img/icon16.png"
         },
         "default_title": "Playlist time babe!"
 
     },
     "icons": {
-        "16": "img/icon16.png",
-        "48": "img/icon48.png",
-        "128": "img/icon128.png"
+        "16": "img/icon16.png"
     }
 }
