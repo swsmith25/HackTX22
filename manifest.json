@@ -1,0 +1,30 @@
+{
+    "name": "Where Am I",
+    "version": "1.0",
+    "description": "Populate webpages with pictures.",
+    "manifest_version": 2,
+    "permissions": [
+        "webNavigation",
+        "declarativeContent",
+        "storage",
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["app/background.js"]
+    },
+    "options_page": "app/settings.html",
+    "page_action": {
+        "default_popup": "app/popup.html",
+        "default_icon": {
+            "16": "img/icon16.png",
+            "32": "img/icon32.png",
+            "48": "img/icon48.png",
+            "128": "img/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    }
+}
