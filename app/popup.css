@@ -1,0 +1,45 @@
+body {
+  min-width: 300px;
+  min-height: 400px;
+  background-color: #0C2D1C;
+}
+h2 {
+  color: #000000;
+  font-size: 17px;
+  font-family: Montserrat;
+  src: url(https://fonts.googleapis.com/css?family=Montserrat);
+}
+input, select, textarea{
+  font-family: Monserrat;
+  src: url(https://fonts.googleapis.com/css?family=Montserrat);
+  color: #D7D7D7;
+}
+input {
+  border:none;
+  background-color: #0C2D1C;
+  
+}
+::placeholder {
+  font-family: Monserrat;
+  src: url(https://fonts.googleapis.com/css?family=Montserrat);
+  color: #D7D7D7
+}
+
+button {
+  color: #D7D7D7;
+  margin: 0;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  border-radius: 20px;
+  text-align: center;
+  
+
+}
+@font-face {
+  font-family: Montserrat;
+  src: url(https://fonts.googleapis.com/css?family=Montserrat);
+}
