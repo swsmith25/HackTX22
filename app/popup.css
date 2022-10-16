@@ -17,10 +17,17 @@ input, select, textarea{
 input {
   border:none;
   background-color: #0C2D1C;
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   
 }
 ::placeholder {
   font-family: Monserrat;
+  text-align: center;
   src: url(https://fonts.googleapis.com/css?family=Montserrat);
   color: #D7D7D7
 }
