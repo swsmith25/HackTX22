@@ -33,6 +33,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             console.log("User is already signed in.");
         } else {
             // sign the user in with Spotify
+            chrome.identity.launchWebAuthFlow({
+                url: create_spotify_endpoint(),
+                interactive: true
+            })
         }
       
       return true;
