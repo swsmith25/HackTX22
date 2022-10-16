@@ -36,7 +36,17 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
             chrome.identity.launchWebAuthFlow({
                 url: create_spotify_endpoint(),
                 interactive: true
-            })
+            }, function(redirect_url){
+                if(chrome.runtime.lastError){
+                    sendResponse({message: "fail"});
+                } else {
+                    if(redirect_url.includes('callback?error=access_denied&state=123')){
+                        sendResponse({message: "fail"});
+                    } else {
+                        console.log(redirect_url);
+                    }
+                }
+            });
         }
       
       return true;
