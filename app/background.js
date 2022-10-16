@@ -44,6 +44,17 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                         sendResponse({message: "fail"});
                     } else {
                         console.log(redirect_url);
+
+                        let access_token = redirect_url.substring(redirect_url.indexOf('access_token=') + 13);
+                        access_token = access_token.substring(0, access_token.indexOf('&'));
+
+                        let state = redirect_url.substring(redirect_url.indexOf('state') + 6);
+                        
+                        console.log(access_token)
+                        chrome.browserAction.setPopup({popup: './popup-signed-in.html'}, () => {
+                            sendResponse({message: 'success bitch'});
+                        });
+                        
                     }
                 }
             });
