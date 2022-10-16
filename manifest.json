@@ -8,7 +8,8 @@
         "declarativeContent",
         "storage",
         "*://open.spotify.com/*",
-        "tabs"
+        "tabs",
+        "identity"
     ],
     "background": {
         "scripts": ["app/background.js"]

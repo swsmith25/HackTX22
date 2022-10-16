@@ -9,3 +9,7 @@ window.addEventListener('load', function (evt) {
 chrome.runtime.onMessage.addListener(function (message) {
 	document.getElementById('pagetitle').innerHTML = message;
 });
+
+document.querySelector('#sign-in').addEventListener('click', function () {
+
+});
